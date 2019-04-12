@@ -7,3 +7,7 @@ Feature: createPatterns
     Given createObjectGeneratorPatternsJava
     When callMethodcreateSingleton
     Then hisReturnStringWithCodeSingleton
+  Scenario: createJavaSingletonWithA
+    Given createObjectGeneratorPatternsJava
+    When callMethodcreateSingletonWithA
+    Then hisReturnStringSingletonA

@@ -36,4 +36,14 @@ public class MyStepdefs {
                 "} ";
         assertTrue(string.equals(finalText));
     }
+
+    @When("^callMethodcreateSingletonWithA$")
+    public void callmethodcreatesingletonwitha() {
+        finalText = generatorPatternJava.createSingleton("A");
+    }
+
+    @Then("^hisReturnStringSingletonA$")
+    public void hisreturnstringsingletona() {
+        assertNotNull(finalText);
+    }
 }
