@@ -28,3 +28,8 @@ Feature: createPatterns
     Given createObjectGeneratorPatternsJava
     When callMethodcreateSingletonWithYES
     Then hisReturnStringWithRightCodeSingletonYES
+
+  Scenario: createJavaSingletonWithManyServer
+    Given createObjectGeneratorPatternsJava
+    When callMethodcreateSingletonWithServer
+    Then hisReturnStringWithRightCodeSingletonServer

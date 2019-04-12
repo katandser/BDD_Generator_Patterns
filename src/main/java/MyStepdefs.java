@@ -102,4 +102,24 @@ public class MyStepdefs {
                 "} ";
         assertTrue(string.equals(finalText));
     }
+
+    @When("^callMethodcreateSingletonWithServer$")
+    public void callmethodcreatesingletonwithserver() {
+        finalText = generatorPatternJava.createSingleton("Server");
+    }
+
+    @Then("^hisReturnStringWithRightCodeSingletonServer$")
+    public void hisreturnstringwithrightcodesingletonserver() {
+        String string = " class Server {\n" +
+                "    private static Server instance;\n" +
+                "    private Server() {}\n" +
+                "    public static Server getInstance() {\n" +
+                "        if (instance == null) {\n" +
+                "            instance = new Server();\n" +
+                "        }\n" +
+                "        return instance;\n" +
+                "    }\n" +
+                "} ";
+        assertTrue(string.equals(finalText));
+    }
 }
