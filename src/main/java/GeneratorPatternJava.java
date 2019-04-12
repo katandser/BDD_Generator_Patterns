@@ -11,5 +11,9 @@ public class GeneratorPatternJava {
                 "    }\n" +
                 "} ";
     }
+    public String createSingleton(String nameOfClass) {
+        return "";
+    }
+
 
 }
