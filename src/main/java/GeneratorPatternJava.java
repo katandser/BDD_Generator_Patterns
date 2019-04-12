@@ -12,16 +12,21 @@ public class GeneratorPatternJava {
                 "} ";
     }
     public String createSingleton(String nameOfClass) {
-        return " class A {\n" +
-                "    private static A instance;\n" +
-                "    private A() {}\n" +
-                "    public static A getInstance() {\n" +
-                "        if (instance == null) {\n" +
-                "            instance = new A();\n" +
-                "        }\n" +
-                "        return instance;\n" +
-                "    }\n" +
-                "} ";
+        if (nameOfClass.equals("Singleton")) {
+            return this.createSingleton();
+        }
+        else {
+            return " class A {\n" +
+                    "    private static A instance;\n" +
+                    "    private A() {}\n" +
+                    "    public static A getInstance() {\n" +
+                    "        if (instance == null) {\n" +
+                    "            instance = new A();\n" +
+                    "        }\n" +
+                    "        return instance;\n" +
+                    "    }\n" +
+                    "} ";
+        }
     }
 
 
