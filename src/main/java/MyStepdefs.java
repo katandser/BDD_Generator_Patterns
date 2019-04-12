@@ -82,4 +82,24 @@ public class MyStepdefs {
                 "} ";
         assertTrue(string.equals(finalText));
     }
+
+    @When("^callMethodcreateSingletonWithYES$")
+    public void callmethodcreatesingletonwithyes() {
+        finalText = generatorPatternJava.createSingleton("YES");
+    }
+
+    @Then("^hisReturnStringWithRightCodeSingletonYES$")
+    public void hisreturnstringwithrightcodesingletonyes() {
+        String string = " class YES {\n" +
+                "    private static YES instance;\n" +
+                "    private YES() {}\n" +
+                "    public static YES getInstance() {\n" +
+                "        if (instance == null) {\n" +
+                "            instance = new YES();\n" +
+                "        }\n" +
+                "        return instance;\n" +
+                "    }\n" +
+                "} ";
+        assertTrue(string.equals(finalText));
+    }
 }
