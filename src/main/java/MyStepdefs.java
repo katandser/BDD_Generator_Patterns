@@ -61,4 +61,25 @@ public class MyStepdefs {
                 "} ";
         assertTrue(string.equals(finalText));
     }
+
+    @When("^callMethodcreateSingletonWithSingleton$")
+    public void callmethodcreatesingletonwithsingleton() {
+        finalText = generatorPatternJava.createSingleton("Singleton");
+
+    }
+
+    @Then("^hisReturnStringWithRightCodeSingletonSingleton$")
+    public void hisreturnstringwithrightcodesingletonsingleton() {
+        String string = " class Singleton {\n" +
+                "    private static Singleton instance;\n" +
+                "    private Singleton() {}\n" +
+                "    public static Singleton getInstance() {\n" +
+                "        if (instance == null) {\n" +
+                "            instance = new Singleton();\n" +
+                "        }\n" +
+                "        return instance;\n" +
+                "    }\n" +
+                "} ";
+        assertTrue(string.equals(finalText));
+    }
 }

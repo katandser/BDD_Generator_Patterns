@@ -18,3 +18,8 @@ Feature: createPatterns
     Given createObjectGeneratorPatternsJava
     When callMethodcreateSingletonWithA
     Then hisReturnStringWithRightCodeSingletonA
+
+  Scenario: createJavaSingletonWithSingleton
+    Given createObjectGeneratorPatternsJava
+    When callMethodcreateSingletonWithSingleton
+    Then hisReturnStringWithRightCodeSingletonSingleton
