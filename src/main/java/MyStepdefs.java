@@ -9,8 +9,7 @@ public class MyStepdefs {
     private String finalText;
     @Given("^createObjectGeneratorPatternsJava$")
     public void createobjectgeneratorpatternsjava() {
-        generatorPatternJava = new GeneratorPatternJAva();
-
+        generatorPatternJava = new GeneratorPatternJava();
     }
 
     @When("^callMethodcreateSingleton$")
@@ -20,6 +19,6 @@ public class MyStepdefs {
 
     @Then("^hisReturnString$")
     public void hisreturnstring() {
-        assertTrue(finalText != null);
+        assertNotNull(finalText);
     }
 }
